@@ -9,5 +9,18 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
     'nuxt-lottie'
-  ]
+  ],
+  routeRules: {
+    '/': { 
+      isr: 3600 
+    },
+
+  },
+
+  fonts: {
+    families: [
+      {name: 'Barlow Condensed', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]},
+      {name: 'Barlow', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]}
+    ]
+  }
 })
