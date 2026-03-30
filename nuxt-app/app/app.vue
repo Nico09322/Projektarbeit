@@ -23,6 +23,9 @@
     const akku72 = ref(null)
 
     
+    
+
+
     onMounted(async () => {
         const ctx = canvas.value.getContext('2d')
 
@@ -204,69 +207,16 @@
         <img src="./assets/pictures/exploded.png" class="absolute top-[15rem] -left-[8rem]  w-[70rem]" alt="exploded"/>
     </div>
     <div class="mt-[8rem] text-[1.1rem]">
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Gehäuse</div>
-                <div class="text-white">Titan (Grade 5)</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div>
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Glas</div>
-                <div class="text-white">Saphirglas, 1.2mm</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div>
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Display</div>
-                <div class="text-white">LTPO AMOLED 2.1"</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div>        
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Auflösung</div>
-                <div class="text-white">510 x 512 px, 326 ppi</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div>
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Prozessor</div>
-                <div class="text-white">Ultra A2 Neural Chip</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div> 
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Akku</div>
-                <div class="text-white">72h, 420mAh</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div> 
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Wasserdicht</div>
-                <div class="text-white">100m / 10 ATM</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div>          
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Sensoren</div>
-                <div class="text-white">EKG, SpO2, Temp, Gyro</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div> 
-        <div class="w-[25vw] gap-[0.75rem] flex flex-col mb-[1rem]">
-            <div class="text-[#656565] flex flex-row justify-between w-[25vw]">
-                <div>Konnektivität</div>
-                <div class="text-white">GPS, LTE, BT 5.3, NFC</div>
-            </div>
-            <div class="bg-[#656565] h-[1px]"></div>
-        </div>                                    
+        <spec :name="'Gehäuse'" :spec="'Titan (Grade 5)'"/>
+        <spec :name="'Glass'" :spec="'Saphirglas, 1.2mm'"/>
+        <spec :name="'Display'" :spec="'LTPO AMOLED 2.1'"/>            
+        <spec :name="'Auflösung'" :spec="'510 x 512px, 326ppi'"/>        
+        <spec :name="'Prozessor'" :spec="'Ultra A2 Neural Chip'"/>        
+        <spec :name="'Akku'" :spec="'72h, 520mAh'"/>        
+        <spec :name="'Wasserdicht'" :spec="'100m / 10 ATM'"/>               
+        <spec :name="'Sensoren'" :spec="'EKG, SpO2, Temp, Gyro'"/>       
+        <spec :name="'Konnektivität'" :spec="'GPS, LTE, BT 5.3, NFC'"/>                                          
     </div>
   </div>
+
 </template>
