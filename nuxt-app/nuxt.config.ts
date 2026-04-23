@@ -8,19 +8,20 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
-    'nuxt-lottie'
+    'nuxt-lottie',
+    '@pinia/nuxt',
   ],
   routeRules: {
-    '/': { 
-      isr: 3600 
+    '/': {
+      isr: 3600
     },
 
   },
 
   fonts: {
     families: [
-      {name: 'Barlow Condensed', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]},
-      {name: 'Barlow', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]}
+      { name: 'Barlow Condensed', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900] },
+      { name: 'Barlow', weights: [100, 200, 300, 400, 500, 600, 700, 800, 900] }
     ]
   }
 })
