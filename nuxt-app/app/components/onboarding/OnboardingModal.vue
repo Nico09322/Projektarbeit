@@ -1,12 +1,22 @@
 <script setup>
     import Step1 from './steps/step1.vue';
     import Step2 from './steps/step2.vue';
+    import Step3 from './steps/step3.vue';
     import { useAutoAnimate } from '@formkit/auto-animate/vue'
     
     const animationParent = ref(null);
     const currentStep = ref(1);
     const totalSteps = 3;
     const next = ref("weiter");
+
+    const formData = ref({
+        alter: null,
+        technik: null,
+        darkMode: false,
+        reducedMotion:false,
+        language: {label: 'Deutsch', value: 'de'},
+        tone: 'normal',
+    })
 
     useAutoAnimate(animationParent)
 
@@ -39,7 +49,7 @@
     }
 
     const finish = () => {
-
+        console.log(formData.value);
     }
 
 </script>
@@ -62,8 +72,9 @@
                 </div>
             </div>
             <div >
-                <Step1 v-if="currentStep === 1"/>
-                <Step2 v-if="currentStep === 2"/>
+                <Step1 v-if="currentStep === 1" :alter="formData.alter" :technik="formData.technik" @update:alter="formData.alter = $event" @update:technik="formData.technik = $event"/>
+                <Step2 v-if="currentStep === 2" :darkMode="formData.darkMode" :reducedMotion="formData.reducedMotion" :language="formData.language" @update:dark-mode="formData.darkMode = $event" @update:language="formData.language = $event" @update:reducedMotion="formData.reducedMotion = $event"/>
+                <Step3 v-if="currentStep === 3" :tone="formData.tone" @update:tone="formData.tone = $event"/>
             </div>
             <div :class="currentStep > 1 ? 'w-full justify-between flex mt-[2rem]' : 'w-full justify-end flex mt-[2rem]'">
                 <div class="bg-secondarytext cursor-pointer hover:bg-secondarytext/75 duration-100 text-white rounded-full p-[0.5rem] pr-[1rem] pl-[1rem] w-fit" v-if="currentStep > 1" @click="clickBack">zurück</div>

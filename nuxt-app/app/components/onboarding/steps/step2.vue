@@ -1,8 +1,17 @@
 <script setup>
+const props = defineProps({
+    darkMode: Boolean,
+    reducedMotion: Boolean,
+    language: {
+        type: Object,
+        default: () => ({label: 'Deutsch', value: 'de'})
+    }
+})
+
+const emit = defineEmits(['update:darkMode', 'update:reducedMotion', 'update:language'])
+
 const open = ref(false)
 const dropdownRef = ref(null)
-const darkMode = ref(false)
-const reducedMotion = ref(false)
 
 const languages = [
     { label: 'Deutsch', value: 'de' },
@@ -17,12 +26,7 @@ const languages = [
     { label: 'Japanisch', value: 'ja' },
 ]
 
-const selected = ref(languages[0])
-
-const select = (lang) => {
-    selected.value = lang
-    open.value = false
-}
+const selected = computed(() => props.language)
 
 onMounted(() => {
     document.addEventListener('click', (e) => {
@@ -42,34 +46,34 @@ onMounted(() => {
         <h3 class="text-primarytext">DARSTELLUNG</h3>
         <div class="w-full flex flex-col justify-between gap-[1rem] text-[1.15rem] font-light">
             <div
-                @click="darkMode = !darkMode"
+                @click="emit('update:darkMode', !props.darkMode)"
                 class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border items-center gap-[2rem] bg-neutral-200 duration-100"
-                :class="darkMode ? 'border-primary' : 'border-secondarytext hover:border-primary'"
+                :class="props.darkMode ? 'border-primary' : 'border-secondarytext hover:border-primary'"
             >
                 <div class="text-secondarytext">Dunklen Modus bevorzugen</div>
                 <div
                     class="rounded-full w-[3.5rem] h-[1.5rem] relative p-[0.25rem] duration-200 flex items-center"
-                    :class="darkMode ? 'bg-primary' : 'bg-primarytext/50'"
+                    :class="props.darkMode ? 'bg-primary' : 'bg-primarytext/50'"
                 >
                     <div
                         class="bg-white w-[1rem] h-[1rem] rounded-full absolute duration-200"
-                        :class="darkMode ? 'left-[calc(100%-1.25rem)]' : 'left-[0.25rem]'"
+                        :class="props.darkMode ? 'left-[calc(100%-1.25rem)]' : 'left-[0.25rem]'"
                     ></div>
                 </div>
             </div>
             <div
-                @click="reducedMotion = !reducedMotion"
+                @click="emit('update:reducedMotion', !props.reducedMotion)"
                 class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border items-center gap-[2rem] bg-neutral-200 duration-100"
-                :class="reducedMotion ? 'border-primary' : 'border-secondarytext hover:border-primary'"
+                :class="props.reducedMotion ? 'border-primary' : 'border-secondarytext hover:border-primary'"
             >
                 <div class="text-secondarytext">Weniger Animationen</div>
                 <div
                     class="rounded-full w-[3.5rem] h-[1.5rem] relative p-[0.25rem] duration-200 flex items-center"
-                    :class="reducedMotion ? 'bg-primary' : 'bg-primarytext/50'"
+                    :class="props.reducedMotion ? 'bg-primary' : 'bg-primarytext/50'"
                 >
                     <div
                         class="bg-white w-[1rem] h-[1rem] rounded-full absolute duration-200"
-                        :class="reducedMotion ? 'left-[calc(100%-1.25rem)]' : 'left-[0.25rem]'"
+                        :class="props.reducedMotion ? 'left-[calc(100%-1.25rem)]' : 'left-[0.25rem]'"
                     ></div>
                 </div>
             </div>
@@ -97,7 +101,7 @@ onMounted(() => {
                 <div
                     v-for="lang in languages"
                     :key="lang.value"
-                    @click="select(lang)"
+                    @click="emit('update:language', lang); open = false"
                     class="flex flex-row items-center px-[1rem] py-[0.5rem] cursor-pointer hover:bg-neutral-300 duration-100"
                     :class="selected.value === lang.value ? 'text-primary font-medium' : 'text-secondarytext'"
                 >
