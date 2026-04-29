@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     'nuxt-lottie',
     '@pinia/nuxt',
   ],
+  pinia: {
+    storesDirs: ['./app/stores/**']
+  },
   routeRules: {
     '/': {
       isr: 3600

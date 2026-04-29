@@ -1,0 +1,113 @@
+{
+    "tokens": {
+        "fontSize": {
+            "base": {
+                "body": "text-base",
+                "lead": "text-sm",
+                "headline": "text-4xl",
+                "subline": "text-lg",
+                "spec": "text-sm",
+                "btn": "text-sm"
+            },
+            "large": {
+                "body": "text-lg",
+                "lead": "text-base",
+                "headline": "text-5xl",
+                "subline": "text-xl",
+                "spec": "text-base",
+                "btn": "text-base"
+            },
+            "xl": {
+                "body": "text-xl",
+                "lead": "text-lg",
+                "headline": "text-6xl",
+                "subline": "text-2xl",
+                "spec": "text-lg",
+                "btn": "text-lg"
+            }
+        },
+        "lineHeight": {
+            "normal": "leading-normal",
+            "relaxed": "leading-relaxed",
+            "loose": "leading-loose"
+        },
+        "spacing": {
+            "normal": {
+                "section": "p-8",
+                "card": "p-4",
+                "gap": "gap-4"
+            },
+            "spacious": {
+                "section": "p-14",
+                "card": "p-8",
+                "gap": "gap-8"
+            }
+        },
+        "contrast": {
+            "normal": {
+                "body": "text-[#B3B3B3]",
+                "muted": "text-[#656565]",
+                "heading": "text-white"
+            },
+            "high": {
+                "body": "text-[#E5E5E5]",
+                "muted": "text-[#A0A0A0]",
+                "heading": "text-white"
+            }
+        },
+        "motion": {
+            "full": "",
+            "reduced": "adapt-reduced-motion"
+        }
+    },
+    "profiles": {
+        "Unter 25": {
+            "fontSize": "base",
+            "lineHeight": "normal",
+            "spacing": "normal",
+            "contrast": "normal",
+            "motion": "full"
+        },
+        "25 - 40": {
+            "fontSize": "base",
+            "lineHeight": "normal",
+            "spacing": "normal",
+            "contrast": "normal",
+            "motion": "full"
+        },
+        "40 - 60": {
+            "fontSize": "large",
+            "lineHeight": "relaxed",
+            "spacing": "spacious",
+            "contrast": "high",
+            "motion": "full"
+        },
+        "Über 60": {
+            "fontSize": "xl",
+            "lineHeight": "loose",
+            "spacing": "spacious",
+            "contrast": "high",
+            "motion": "reduced"
+        }
+    },
+    "safelist": [
+        "text-sm",
+        "text-base",
+        "text-lg",
+        "text-xl",
+        "text-2xl",
+        "text-4xl",
+        "text-5xl",
+        "text-6xl",
+        "leading-normal",
+        "leading-relaxed",
+        "leading-loose",
+        "p-8",
+        "p-14",
+        "p-4",
+        "p-8",
+        "gap-4",
+        "gap-8",
+        "adapt-reduced-motion"
+    ]
+}

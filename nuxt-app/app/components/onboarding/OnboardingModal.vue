@@ -2,12 +2,17 @@
     import Step1 from './steps/step1.vue';
     import Step2 from './steps/step2.vue';
     import Step3 from './steps/step3.vue';
+    import FinalStep from './steps/final.vue'
     import { useAutoAnimate } from '@formkit/auto-animate/vue'
+    import { useUserProfileStore } from '~/stores/userProfile';
     
     const animationParent = ref(null);
     const currentStep = ref(1);
     const totalSteps = 3;
     const next = ref("weiter");
+    const profileStore = useUserProfileStore();
+    const onboardScreen = ref(true);
+    const finishScreen = ref(false);
 
     const formData = ref({
         alter: null,
@@ -49,6 +54,9 @@
     }
 
     const finish = () => {
+        finishScreen.value = true;
+        onboardScreen.value = false;
+        //profileStore.setProfile(formData.value);
         console.log(formData.value);
     }
 
@@ -71,12 +79,18 @@
                     <div class="text-secondarytext">Schritt {{ currentStep }} von 3</div>
                 </div>
             </div>
-            <div >
+            <div v-if="onboardScreen">
                 <Step1 v-if="currentStep === 1" :alter="formData.alter" :technik="formData.technik" @update:alter="formData.alter = $event" @update:technik="formData.technik = $event"/>
                 <Step2 v-if="currentStep === 2" :darkMode="formData.darkMode" :reducedMotion="formData.reducedMotion" :language="formData.language" @update:dark-mode="formData.darkMode = $event" @update:language="formData.language = $event" @update:reducedMotion="formData.reducedMotion = $event"/>
                 <Step3 v-if="currentStep === 3" :tone="formData.tone" @update:tone="formData.tone = $event"/>
             </div>
-            <div :class="currentStep > 1 ? 'w-full justify-between flex mt-[2rem]' : 'w-full justify-end flex mt-[2rem]'">
+            <div v-if="finishScreen">
+                <FinalStep />
+                <div class="w-full h-[3rem] rounded-lg bg-primary mt-[3rem] flex justify-center items-center cursor-pointer hover:bg-primary/50 duration-150">
+                    <div class="text-white">weiter zur Website</div>
+                </div>
+            </div>
+            <div v-if="onboardScreen" :class="currentStep > 1 ? 'w-full justify-between flex mt-[2rem]' : 'w-full justify-end flex mt-[2rem]'">
                 <div class="bg-secondarytext cursor-pointer hover:bg-secondarytext/75 duration-100 text-white rounded-full p-[0.5rem] pr-[1rem] pl-[1rem] w-fit" v-if="currentStep > 1" @click="clickBack">zurück</div>
                 <div class="bg-primary cursor-pointer hover:bg-primary/75 duration-100 text-white rounded-full p-[0.5rem] pr-[1rem] pl-[1rem] w-fit" @click="clickNext">{{next}}</div>
             </div>
