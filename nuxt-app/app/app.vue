@@ -6,6 +6,8 @@
     import OnboardingModal from './components/onboarding/OnboardingModal.vue'
     import { useUserProfileStore } from './stores/userProfile'
     import { useAdaptiveUI } from './composables/useAdaptiveUI'
+    import { useUIAdaptationsStore } from '~/stores/uiAdaptations';
+import AdaptUiChat from './components/chat/adaptUiChat.vue'
 
     gsap.registerPlugin(ScrollTrigger)
     gsap.registerPlugin(SplitText)
@@ -25,9 +27,14 @@
     const gesundheitsKI = ref(null)
     const akku72 = ref(null)
     const profileStore = useUserProfileStore()
+    const uiStore = useUIAdaptationsStore();
     const {text, color, layout, motion} = useAdaptiveUI();
 
     onMounted(async () => {
+        if(profileStore.onboardingComplete) {
+            uiStore.applyProfile(profileStore.$state)
+        }
+
         const ctx = canvas.value.getContext('2d')
 
         const promises = Array.from({ length: frameCount }, (_, i) => {
@@ -140,6 +147,7 @@
 
 <template>
     <onboarding-modal v-if="!profileStore.onboardingComplete" class=""/>
+    <adaptUiChat v-if="profileStore.onboardingComplete"/>
     <navbar class="fixed top-0 z-50 w-full"/>
     <!--Hero-->
     <div class="absolute -z-50 top-0 w-full">
