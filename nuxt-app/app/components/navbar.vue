@@ -1,11 +1,13 @@
 <script setup>
 
     import { gsap } from 'gsap'
+    import { useAdaptiveUI } from '~/composables/useAdaptiveUI';
 
     const designLine = ref(null);
     const techLine = ref(null);
     const healthLine = ref(null);
     const buy = ref(null);
+    const {text} = useAdaptiveUI();
 
     onMounted(async () => {
             gsap.to(designLine.value, {
@@ -58,7 +60,7 @@
 </script>
 
 <template>
-    <div class="font-barlow text-[1.15rem] border border-b-1 border-t-0 border-r-0 border-l-0 pb-[1rem] border-white border-opacity-30 backdrop-blur-md">
+    <div :class="[text.body,'font-barlow border border-b-1 border-t-0 border-r-0 border-l-0 pb-[1rem] border-white border-opacity-30 backdrop-blur-md']">
         <div class="h-[4rem] w-full flex flex-row z-100 gap-[4rem] justify-center pt-[1rem] items-center text-[#656565]">
             <div class="hover:text-white duration-75 cursor-pointer overflow-hidden justify-center" @mouseenter="hover(designLine)" @mouseleave="leave(designLine)">
                 <div class="">Design</div>

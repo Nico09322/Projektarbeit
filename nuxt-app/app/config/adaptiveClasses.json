@@ -7,7 +7,9 @@
                 "headline": "text-4xl",
                 "subline": "text-lg",
                 "spec": "text-sm",
-                "btn": "text-sm"
+                "btn": "text-sm",
+                "hero": "text-9xl",
+                "sectionHead": "text-7xl"
             },
             "large": {
                 "body": "text-lg",
@@ -15,7 +17,9 @@
                 "headline": "text-5xl",
                 "subline": "text-xl",
                 "spec": "text-base",
-                "btn": "text-base"
+                "btn": "text-base",
+                "hero": "text-9xl",
+                "sectionHead": "text-7xl"
             },
             "xl": {
                 "body": "text-xl",
@@ -23,7 +27,9 @@
                 "headline": "text-6xl",
                 "subline": "text-2xl",
                 "spec": "text-lg",
-                "btn": "text-lg"
+                "btn": "text-lg",
+                "hero": "text-9xl",
+                "sectionHead": "text-7xl"
             }
         },
         "lineHeight": {
@@ -99,6 +105,8 @@
         "text-4xl",
         "text-5xl",
         "text-6xl",
+        "text-9xl",
+        "text-7xl",
         "leading-normal",
         "leading-relaxed",
         "leading-loose",

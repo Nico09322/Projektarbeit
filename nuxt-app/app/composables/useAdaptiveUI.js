@@ -20,10 +20,12 @@ export function useAdaptiveUI() {
     const text = computed(() => ({
         body: `${cls.value.body} ${cls.value.lineHeight}`,
         lead: `${cls.value.lead} ${cls.value.lineHeight}`,
-        headline: `${cls.value.headline} font-black`,
+        headline: `${cls.value.headline} font-black ${cls.value.lineHeight}`,
         subline: `${cls.value.subline} ${cls.value.lineHeight}`,
         spec: `${cls.value.spec}`,
         btn: `${cls.value.btn}`,
+        hero: `${cls.value.hero}`,
+        section: `${cls.value.sectionHead}`
     }))
 
     /**

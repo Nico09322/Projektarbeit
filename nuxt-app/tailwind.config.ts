@@ -1,4 +1,7 @@
+import adaptive from './app/config/adaptiveClasses.json'
+
 export default {
+    safelist: adaptive.safelist,
     theme: {
         extend: {
             fontFamily: {

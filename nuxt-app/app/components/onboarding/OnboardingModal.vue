@@ -5,12 +5,14 @@
     import FinalStep from './steps/final.vue'
     import { useAutoAnimate } from '@formkit/auto-animate/vue'
     import { useUserProfileStore } from '~/stores/userProfile';
+    import { useUIAdaptationsStore } from '~/stores/uiAdaptations';
     
     const animationParent = ref(null);
     const currentStep = ref(1);
     const totalSteps = 3;
     const next = ref("weiter");
     const profileStore = useUserProfileStore();
+    const uiStore = useUIAdaptationsStore();
     const onboardScreen = ref(true);
     const finishScreen = ref(false);
 
@@ -56,8 +58,12 @@
     const finish = () => {
         finishScreen.value = true;
         onboardScreen.value = false;
-        //profileStore.setProfile(formData.value);
+        uiStore.applyProfile(formData.value)
         console.log(formData.value);
+    }
+
+    const closeModal = () =>{
+        profileStore.setProfile(formData.value);
     }
 
 </script>
@@ -86,7 +92,7 @@
             </div>
             <div v-if="finishScreen">
                 <FinalStep />
-                <div class="w-full h-[3rem] rounded-lg bg-primary mt-[3rem] flex justify-center items-center cursor-pointer hover:bg-primary/50 duration-150">
+                <div @click="closeModal" class="w-full h-[3rem] rounded-lg bg-primary mt-[3rem] flex justify-center items-center cursor-pointer hover:bg-primary/50 duration-150">
                     <div class="text-white">weiter zur Website</div>
                 </div>
             </div>
