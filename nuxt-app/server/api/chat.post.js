@@ -14,7 +14,8 @@ Format deiner Antwort (immer exakt so, kein Markdown, kein Prefix):
     "spacing": "normal|spacious",
     "contrast": "normal|high",
     "motion": "full|reduced"
-  }
+  },
+  "language": "de|en|fr|es|it|tr|ar|ru|zh|ja"
 }
 
 Regeln für uiMutations:
@@ -24,6 +25,12 @@ Regeln für uiMutations:
 - Ändere motion auf "reduced" wenn der Nutzer Animationen störend findet.
 - Ändere contrast auf "high" bei Leseproblemen oder Barrierefreiheits-Wunsch.
 - Erkläre in "message" kurz, was du geändert hast und warum.
+
+Regeln für language:
+- Setze "language" NUR wenn der Nutzer explizit die Sprache wechseln möchte (z.B. "switch to English", "auf Spanisch bitte", "change language to French").
+- Der Wert ist der ISO-639-1-Code der gewünschten Sprache.
+- Lass das Feld weg wenn keine Sprachänderung gewünscht ist.
+- Antworte in deiner "message" bereits in der neuen Sprache und bestätige die Umstellung.
 `
 
 function buildSystemPrompt(profile) {
@@ -73,7 +80,7 @@ export default defineEventHandler(async (event) => {
         model: 'llama-3.3-70b-versatile',
         messages: [
             { role: 'system', content: buildSystemPrompt(profile) },
-            ...messages.slice(-20),
+            ...messages.slice(-20).map(({ role, content }) => ({ role, content })),
         ],
         max_tokens: 600,
         temperature: 0.7,
@@ -91,6 +98,7 @@ export default defineEventHandler(async (event) => {
     return {
         message: parsed.message ?? '',
         uiMutations: parsed.uiMutations ?? {},
+        language: parsed.language ?? null,
         usage: completion.usage,
     }
 })

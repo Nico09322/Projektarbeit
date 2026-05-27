@@ -7,7 +7,7 @@
     import { useUserProfileStore } from '~/stores/userProfile';
     import { useUIAdaptationsStore } from '~/stores/uiAdaptations';
     
-    const animationParent = ref(null);
+    const [animationParent] = useAutoAnimate();
     const currentStep = ref(1);
     const totalSteps = 3;
     const next = ref("weiter");
@@ -24,8 +24,6 @@
         language: {label: 'Deutsch', value: 'de'},
         tone: 'normal',
     })
-
-    useAutoAnimate(animationParent)
 
     onMounted(() => {
     document.body.style.overflow = 'hidden'

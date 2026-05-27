@@ -7,7 +7,8 @@
     import { useUserProfileStore } from './stores/userProfile'
     import { useAdaptiveUI } from './composables/useAdaptiveUI'
     import { useUIAdaptationsStore } from '~/stores/uiAdaptations';
-import AdaptUiChat from './components/chat/adaptUiChat.vue'
+    import AdaptUiChat from './components/chat/adaptUiChat.vue'
+    import { useTranslations } from './composables/useTranslations'
 
     gsap.registerPlugin(ScrollTrigger)
     gsap.registerPlugin(SplitText)
@@ -29,6 +30,7 @@ import AdaptUiChat from './components/chat/adaptUiChat.vue'
     const profileStore = useUserProfileStore()
     const uiStore = useUIAdaptationsStore();
     const {text, color, layout, motion} = useAdaptiveUI();
+    const { t } = useTranslations();
 
     onMounted(async () => {
         if(profileStore.onboardingComplete) {
@@ -166,22 +168,22 @@ import AdaptUiChat from './components/chat/adaptUiChat.vue'
         <div :class="[text.hero, 'z-10 text-[#F27127]  font-black h-[10rem] overflow-hidden font-barlowC']"  ref="ultra">
             ULTRA
         </div>
-        <div :class="[text.headline,'text-white text-[1.5rem] font-light ml-[0.25rem] overflow-hidden font-barlow']" ref="subUltra">Built to perform.</div>
+        <div :class="[text.headline,'text-white text-[1.5rem] font-light ml-[0.25rem] overflow-hidden font-barlow']" ref="subUltra">{{ t.hero.tagline }}</div>
         <div :class="[text.body,'flex flex-row gap-[1.5rem] mt-[2rem] overflow-hidden h-[3rem] font-barlow']">
-            <div class="h-[2.5rem] bg-[#F27127] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] rounded-[100rem] text-white cursor-pointer" ref="buy">Kaufen - 899€</div>
-            <div class="h-[2.5rem] text-[#656565] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] border border-[#656565] rounded-[100rem] cursor-pointer" ref="more">mehr erfahren</div>
+            <div class="h-[2.5rem] bg-[#F27127] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] rounded-[100rem] text-white cursor-pointer" ref="buy">{{ t.hero.buy }}</div>
+            <div class="h-[2.5rem] text-[#656565] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] border border-[#656565] rounded-[100rem] cursor-pointer" ref="more">{{ t.hero.more }}</div>
         </div>
     </div>
     <!--Design-->
     <div class="h-[90rem] mb-[14rem] font-barlow">
         <div class="mt-[20rem] sticky top-[20rem]" ref="designContainer"> 
             <div class="pl-[10vw] flex flex-row items-center gap-[1rem]" ref="adaptiveDisplay">
-                <div> 
+                <div>
                     <div :class="[text.subline,'text-white flex flex-row gap-[0.5rem] font-bold']">
                         <div>01</div>
-                        <div class="text-[#F27127]">Adaptive Display</div>
+                        <div class="text-[#F27127]">{{ t.features.f1title }}</div>
                     </div>
-                    <div :class="[text.body,'text-[#B3B3B3] w-[15rem]']">Das Always-On-Display passt Helligkeit, Schriftgröße und Informationsdichte automatisch an Licht und Situation an</div>
+                    <div :class="[text.body,'text-[#B3B3B3] w-[15rem]']">{{ t.features.f1desc }}</div>
                 </div>
                 <div class="w-[13rem] h-[0.1rem] bg-gradient-to-r from-[#FFFFFF] to-transparent"></div>
             </div>
@@ -190,20 +192,20 @@ import AdaptUiChat from './components/chat/adaptUiChat.vue'
                 <div>
                     <div :class="[text.subline,'text-white flex flex-row gap-[0.5rem] font-bold ']">
                         <div>02</div>
-                        <div class="text-[#F27127]">Gesundheits-KI</div>
+                        <div class="text-[#F27127]">{{ t.features.f2title }}</div>
                     </div>
-                    <div :class="[text.body,'text-[#B3B3B3] w-[15rem]']">Kontinuierliche EKG, SpO2 und Stressmessung. Interpretiert von einer persönlichen KI, die deine Muster versteht</div>
+                    <div :class="[text.body,'text-[#B3B3B3] w-[15rem]']">{{ t.features.f2desc }}</div>
                 </div>
-            </div>    
+            </div>
             <div class="mt-[6rem] ml-[15vw] flex flex-row items-center gap-[1rem]" ref="akku72">
                 <div>
                     <div :class="[text.subline,'text-white flex flex-row gap-[0.5rem] font-bold'] ">
                         <div>03</div>
-                        <div class="text-[#F27127]">72h Akkulaufzeit</div>
+                        <div class="text-[#F27127]">{{ t.features.f3title }}</div>
                     </div>
-                    <div :class="[text.body,'text-[#B3B3B3] w-[14rem]']">Intelligentes Energiemanagement verlängert die Laufzeit auf bis zu 72 Stunden</div>
+                    <div :class="[text.body,'text-[#B3B3B3] w-[14rem]']">{{ t.features.f3desc }}</div>
                 </div>
-                <div class="w-[13rem] h-[0.1rem] bg-gradient-to-r from-[#FFFFFF] to-transparent"></div>        
+                <div class="w-[13rem] h-[0.1rem] bg-gradient-to-r from-[#FFFFFF] to-transparent"></div>
             </div>       
         </div>
     </div>
@@ -211,52 +213,52 @@ import AdaptUiChat from './components/chat/adaptUiChat.vue'
     <div class="font-barlow flex flex-row bg-[#151110] p-[10vw] pb-[20rem] justify-between w-[100%]">
         <div class="mt-[5rem] flex flex-col relative w-[70rem]">
             <div class="flex flex-row items-center gap-[1rem] ">
-                <div class="text-[#F27127]">technische Daten</div>
+                <div class="text-[#F27127]">{{ t.specs.label }}</div>
                 <div class="h-[0.1rem] w-[10rem] bg-gradient-to-r from-[#F27127] to-transparent"></div>
             </div>
-            <div :class="[text.section,'text-white font-bold w-[20rem]']">Kompromisslose Präzision.</div>
-            <div :class="[text.subline,'text-[#656565]  w-[40rem]']">Gebaut aus Materialien, die Jahrzehnte überdauern. Ausgestattet mit Sensoren, die nichts verpassen</div>
+            <div :class="[text.section,'text-white font-bold w-[20rem]']">{{ t.specs.headline }}</div>
+            <div :class="[text.subline,'text-[#656565]  w-[40rem]']">{{ t.specs.subline }}</div>
             <img src="./assets/pictures/exploded.png" class="absolute top-[15rem] -left-[8rem]  w-[70rem]" alt="exploded"/>
         </div>
         <div class="mt-[8rem]">
-            <spec :name="'Gehäuse'" :spec="'Titan (Grade 5)'"/>
-            <spec :name="'Glass'" :spec="'Saphirglas, 1.2mm'"/>
-            <spec :name="'Display'" :spec="'LTPO AMOLED 2.1'"/>            
-            <spec :name="'Auflösung'" :spec="'510 x 512px, 326ppi'"/>        
-            <spec :name="'Prozessor'" :spec="'Ultra A2 Neural Chip'"/>        
-            <spec :name="'Akku'" :spec="'72h, 520mAh'"/>        
-            <spec :name="'Wasserdicht'" :spec="'100m / 10 ATM'"/>               
-            <spec :name="'Sensoren'" :spec="'EKG, SpO2, Temp, Gyro'"/>       
-            <spec :name="'Konnektivität'" :spec="'GPS, LTE, BT 5.3, NFC'"/>                                          
+            <spec :name="t.specs.case" spec="Titan (Grade 5)"/>
+            <spec :name="t.specs.glass" spec="Saphirglas, 1.2mm"/>
+            <spec :name="t.specs.display" spec="LTPO AMOLED 2.1"/>
+            <spec :name="t.specs.resolution" spec="510 x 512px, 326ppi"/>
+            <spec :name="t.specs.processor" spec="Ultra A2 Neural Chip"/>
+            <spec :name="t.specs.battery" spec="72h, 520mAh"/>
+            <spec :name="t.specs.waterResistance" spec="100m / 10 ATM"/>
+            <spec :name="t.specs.sensors" spec="EKG, SpO2, Temp, Gyro"/>
+            <spec :name="t.specs.connectivity" spec="GPS, LTE, BT 5.3, NFC"/>
         </div>
     </div>
     <!--Color-->
     <div class="font-barlow flex flex-col bg-[#151110] p-[10vw] pb-[20rem] justify-between w-[100%]">
         <div class="flex flex-row gap-[1rem] justify-center -mt-[15rem]">
-            <colorPrev color="linear-gradient(90deg,rgba(184, 134, 11, 1) 0%, rgba(204, 170, 106, 1) 49%, rgba(184, 134, 11, 1) 100%);" name="Desert Gold" desc="PVD-Gold, limitierte Edition"/>
+            <colorPrev color="linear-gradient(90deg,rgba(184, 134, 11, 1) 0%, rgba(204, 170, 106, 1) 49%, rgba(184, 134, 11, 1) 100%);" name="Desert Gold" :desc="t.colors.desertGoldDesc"/>
             <div class="w-[1px] bg-[#656565]"></div>
-            <colorPrev color="linear-gradient(90deg,rgba(145, 145, 145, 1) 1%, rgba(219, 219, 219, 1) 49%, rgba(133, 133, 133, 1) 100%);" name="Titan Silber" desc="Klassiche Eleganz, maximal leicht"/>
-            <div class="w-[1px] bg-[#656565]"></div>        
-            <colorPrev color="linear-gradient(90deg,rgba(20, 20, 20, 1) 1%, rgba(51, 51, 51, 1) 49%, rgba(20, 20, 20, 1) 100%);" name="Space Black" desc="DLC-beschichtetes Titan, tiefschwarz"/>
+            <colorPrev color="linear-gradient(90deg,rgba(145, 145, 145, 1) 1%, rgba(219, 219, 219, 1) 49%, rgba(133, 133, 133, 1) 100%);" name="Titan Silber" :desc="t.colors.titanSilberDesc"/>
+            <div class="w-[1px] bg-[#656565]"></div>
+            <colorPrev color="linear-gradient(90deg,rgba(20, 20, 20, 1) 1%, rgba(51, 51, 51, 1) 49%, rgba(20, 20, 20, 1) 100%);" name="Space Black" :desc="t.colors.spaceBlackDesc"/>
         </div>
     </div>
     <!--CTA-->
     <div class="h-[2px] bg-gradient-to-r from-transparent via-[#4a4a4a] to-transparent w-[70%] mx-auto -mt-[10rem] mb-[5rem]"></div>
     <div class="items-center flex flex-col font-barlow bg-[#151110] pb-[10rem] ">
-        <div :class="[text,body,'text-[#656565] flex flex-row gap-[0.5rem] items-center']">
-            <div>Ab 899€</div>
+        <div :class="[text.body,'text-[#656565] flex flex-row gap-[0.5rem] items-center']">
+            <div>{{ t.cta.price }}</div>
             <div class="bg-[#656565] w-[0.3rem] h-[0.3rem] rounded-full"></div>
-            <div>kostenloser Versand</div>
+            <div>{{ t.cta.shipping }}</div>
             <div class="bg-[#656565] w-[0.3rem] h-[0.3rem] rounded-full"></div>
-            <div>30 Tage Rückgabe</div>
+            <div>{{ t.cta.returns }}</div>
         </div>
         <div :class="[text.headline ,'font-black mt-[1rem] text-center']">
-            <div class="text-white">Deine Zeit.</div>
-            <div class="text-[#F27127] text-[3.5rem] -mt-[1rem]">Deine Uhr.</div>
+            <div class="text-white">{{ t.cta.headline1 }}</div>
+            <div class="text-[#F27127] text-[3.5rem] -mt-[1rem]">{{ t.cta.headline2 }}</div>
         </div>
         <div :class="[text.body,'flex flex-row gap-[1rem] mt-[2rem]']">
-            <div class="h-[2.5rem] bg-[#F27127] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] rounded-[100rem] text-white cursor-pointer" >jetzt konfigurieren</div>
-            <div class="h-[2.5rem] text-[#656565] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] border border-[#656565] rounded-[100rem] cursor-pointer" >Händler finden</div>
+            <div class="h-[2.5rem] bg-[#F27127] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] rounded-[100rem] text-white cursor-pointer">{{ t.cta.configure }}</div>
+            <div class="h-[2.5rem] text-[#656565] p-[0.5rem] pl-[1.5rem] pr-[1.5rem] border border-[#656565] rounded-[100rem] cursor-pointer">{{ t.cta.dealer }}</div>
         </div>
     </div>
 </template>

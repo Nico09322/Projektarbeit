@@ -1,0 +1,492 @@
+{
+  "de": {
+    "nav": {
+      "design": "Design",
+      "technologie": "Technologie",
+      "gesundheit": "Gesundheit",
+      "bestellen": "Bestellen"
+    },
+    "hero": {
+      "tagline": "Built to perform.",
+      "buy": "Kaufen – 899€",
+      "more": "mehr erfahren"
+    },
+    "features": {
+      "f1title": "Adaptive Display",
+      "f1desc": "Das Always-On-Display passt Helligkeit, Schriftgröße und Informationsdichte automatisch an Licht und Situation an",
+      "f2title": "Gesundheits-KI",
+      "f2desc": "Kontinuierliche EKG, SpO2 und Stressmessung. Interpretiert von einer persönlichen KI, die deine Muster versteht",
+      "f3title": "72h Akkulaufzeit",
+      "f3desc": "Intelligentes Energiemanagement verlängert die Laufzeit auf bis zu 72 Stunden"
+    },
+    "specs": {
+      "label": "technische Daten",
+      "headline": "Kompromisslose Präzision.",
+      "subline": "Gebaut aus Materialien, die Jahrzehnte überdauern. Ausgestattet mit Sensoren, die nichts verpassen",
+      "case": "Gehäuse",
+      "glass": "Glas",
+      "display": "Display",
+      "resolution": "Auflösung",
+      "processor": "Prozessor",
+      "battery": "Akku",
+      "waterResistance": "Wasserdicht",
+      "sensors": "Sensoren",
+      "connectivity": "Konnektivität"
+    },
+    "colors": {
+      "desertGoldDesc": "PVD-Gold, limitierte Edition",
+      "titanSilberDesc": "Klassische Eleganz, maximal leicht",
+      "spaceBlackDesc": "DLC-beschichtetes Titan, tiefschwarz"
+    },
+    "cta": {
+      "price": "Ab 899€",
+      "shipping": "kostenloser Versand",
+      "returns": "30 Tage Rückgabe",
+      "headline1": "Deine Zeit.",
+      "headline2": "Deine Uhr.",
+      "configure": "jetzt konfigurieren",
+      "dealer": "Händler finden"
+    }
+  },
+  "en": {
+    "nav": {
+      "design": "Design",
+      "technologie": "Technology",
+      "gesundheit": "Health",
+      "bestellen": "Order"
+    },
+    "hero": {
+      "tagline": "Built to perform.",
+      "buy": "Buy – €899",
+      "more": "learn more"
+    },
+    "features": {
+      "f1title": "Adaptive Display",
+      "f1desc": "The Always-On Display automatically adapts brightness, font size and information density to light and situation",
+      "f2title": "Health AI",
+      "f2desc": "Continuous ECG, SpO2 and stress monitoring. Interpreted by a personal AI that understands your patterns",
+      "f3title": "72h Battery Life",
+      "f3desc": "Intelligent energy management extends battery life to up to 72 hours"
+    },
+    "specs": {
+      "label": "technical specs",
+      "headline": "Uncompromising Precision.",
+      "subline": "Built from materials that last decades. Equipped with sensors that miss nothing",
+      "case": "Case",
+      "glass": "Glass",
+      "display": "Display",
+      "resolution": "Resolution",
+      "processor": "Processor",
+      "battery": "Battery",
+      "waterResistance": "Water Resistance",
+      "sensors": "Sensors",
+      "connectivity": "Connectivity"
+    },
+    "colors": {
+      "desertGoldDesc": "PVD Gold, limited edition",
+      "titanSilberDesc": "Classic elegance, maximally light",
+      "spaceBlackDesc": "DLC-coated titanium, deep black"
+    },
+    "cta": {
+      "price": "From €899",
+      "shipping": "free shipping",
+      "returns": "30-day returns",
+      "headline1": "Your Time.",
+      "headline2": "Your Watch.",
+      "configure": "configure now",
+      "dealer": "find a dealer"
+    }
+  },
+  "fr": {
+    "nav": {
+      "design": "Design",
+      "technologie": "Technologie",
+      "gesundheit": "Santé",
+      "bestellen": "Commander"
+    },
+    "hero": {
+      "tagline": "Conçu pour performer.",
+      "buy": "Acheter – 899€",
+      "more": "en savoir plus"
+    },
+    "features": {
+      "f1title": "Affichage Adaptatif",
+      "f1desc": "L'écran Always-On adapte automatiquement la luminosité, la taille de police et la densité d'informations à la lumière et à la situation",
+      "f2title": "IA Santé",
+      "f2desc": "Surveillance continue de l'ECG, de la SpO2 et du stress. Interprétée par une IA personnelle qui comprend vos habitudes",
+      "f3title": "72h d'autonomie",
+      "f3desc": "Une gestion intelligente de l'énergie prolonge l'autonomie jusqu'à 72 heures"
+    },
+    "specs": {
+      "label": "caractéristiques techniques",
+      "headline": "Précision sans compromis.",
+      "subline": "Fabriqué avec des matériaux qui durent des décennies. Équipé de capteurs qui ne ratent rien",
+      "case": "Boîtier",
+      "glass": "Verre",
+      "display": "Écran",
+      "resolution": "Résolution",
+      "processor": "Processeur",
+      "battery": "Batterie",
+      "waterResistance": "Résistance à l'eau",
+      "sensors": "Capteurs",
+      "connectivity": "Connectivité"
+    },
+    "colors": {
+      "desertGoldDesc": "Or PVD, édition limitée",
+      "titanSilberDesc": "Élégance classique, légèreté maximale",
+      "spaceBlackDesc": "Titane revêtu DLC, noir profond"
+    },
+    "cta": {
+      "price": "À partir de 899€",
+      "shipping": "livraison gratuite",
+      "returns": "30 jours de retour",
+      "headline1": "Votre Temps.",
+      "headline2": "Votre Montre.",
+      "configure": "configurer maintenant",
+      "dealer": "trouver un revendeur"
+    }
+  },
+  "es": {
+    "nav": {
+      "design": "Diseño",
+      "technologie": "Tecnología",
+      "gesundheit": "Salud",
+      "bestellen": "Pedir"
+    },
+    "hero": {
+      "tagline": "Diseñado para rendir.",
+      "buy": "Comprar – 899€",
+      "more": "saber más"
+    },
+    "features": {
+      "f1title": "Pantalla Adaptativa",
+      "f1desc": "La pantalla Always-On ajusta automáticamente el brillo, el tamaño de fuente y la densidad de información a la luz y la situación",
+      "f2title": "IA de Salud",
+      "f2desc": "Monitoreo continuo de ECG, SpO2 y estrés. Interpretado por una IA personal que entiende tus patrones",
+      "f3title": "72h de Batería",
+      "f3desc": "La gestión inteligente de energía extiende la duración de la batería hasta 72 horas"
+    },
+    "specs": {
+      "label": "especificaciones técnicas",
+      "headline": "Precisión sin compromisos.",
+      "subline": "Fabricado con materiales que duran décadas. Equipado con sensores que no se pierden nada",
+      "case": "Caja",
+      "glass": "Cristal",
+      "display": "Pantalla",
+      "resolution": "Resolución",
+      "processor": "Procesador",
+      "battery": "Batería",
+      "waterResistance": "Resistencia al agua",
+      "sensors": "Sensores",
+      "connectivity": "Conectividad"
+    },
+    "colors": {
+      "desertGoldDesc": "Oro PVD, edición limitada",
+      "titanSilberDesc": "Elegancia clásica, peso mínimo",
+      "spaceBlackDesc": "Titanio con recubrimiento DLC, negro profundo"
+    },
+    "cta": {
+      "price": "Desde 899€",
+      "shipping": "envío gratuito",
+      "returns": "30 días de devolución",
+      "headline1": "Tu Tiempo.",
+      "headline2": "Tu Reloj.",
+      "configure": "configurar ahora",
+      "dealer": "encontrar distribuidor"
+    }
+  },
+  "it": {
+    "nav": {
+      "design": "Design",
+      "technologie": "Tecnologia",
+      "gesundheit": "Salute",
+      "bestellen": "Ordina"
+    },
+    "hero": {
+      "tagline": "Progettato per performare.",
+      "buy": "Acquista – 899€",
+      "more": "scopri di più"
+    },
+    "features": {
+      "f1title": "Display Adattivo",
+      "f1desc": "Il display Always-On adatta automaticamente luminosità, dimensione del testo e densità delle informazioni alla luce e alla situazione",
+      "f2title": "IA per la Salute",
+      "f2desc": "Monitoraggio continuo di ECG, SpO2 e stress. Interpretato da una IA personale che comprende i tuoi schemi",
+      "f3title": "72h di Autonomia",
+      "f3desc": "La gestione intelligente dell'energia estende l'autonomia fino a 72 ore"
+    },
+    "specs": {
+      "label": "specifiche tecniche",
+      "headline": "Precisione senza compromessi.",
+      "subline": "Costruito con materiali che durano decenni. Dotato di sensori che non perdono nulla",
+      "case": "Cassa",
+      "glass": "Vetro",
+      "display": "Display",
+      "resolution": "Risoluzione",
+      "processor": "Processore",
+      "battery": "Batteria",
+      "waterResistance": "Resistenza all'acqua",
+      "sensors": "Sensori",
+      "connectivity": "Connettività"
+    },
+    "colors": {
+      "desertGoldDesc": "Oro PVD, edizione limitata",
+      "titanSilberDesc": "Eleganza classica, massima leggerezza",
+      "spaceBlackDesc": "Titanio con rivestimento DLC, nero profondo"
+    },
+    "cta": {
+      "price": "Da 899€",
+      "shipping": "spedizione gratuita",
+      "returns": "30 giorni di reso",
+      "headline1": "Il tuo Tempo.",
+      "headline2": "Il tuo Orologio.",
+      "configure": "configura ora",
+      "dealer": "trova un rivenditore"
+    }
+  },
+  "tr": {
+    "nav": {
+      "design": "Tasarım",
+      "technologie": "Teknoloji",
+      "gesundheit": "Sağlık",
+      "bestellen": "Sipariş Ver"
+    },
+    "hero": {
+      "tagline": "Performans için üretildi.",
+      "buy": "Satın Al – 899€",
+      "more": "daha fazla bilgi"
+    },
+    "features": {
+      "f1title": "Uyarlanabilir Ekran",
+      "f1desc": "Always-On ekran, parlaklığı, yazı boyutunu ve bilgi yoğunluğunu ışığa ve duruma göre otomatik olarak ayarlar",
+      "f2title": "Sağlık YZ",
+      "f2desc": "Sürekli EKG, SpO2 ve stres izleme. Kalıplarınızı anlayan kişisel bir YZ tarafından yorumlanır",
+      "f3title": "72 Saatlik Pil Ömrü",
+      "f3desc": "Akıllı enerji yönetimi, pil ömrünü 72 saate kadar uzatır"
+    },
+    "specs": {
+      "label": "teknik özellikler",
+      "headline": "Uzlaşmasız Hassasiyet.",
+      "subline": "On yıllarca dayanan malzemelerden üretildi. Hiçbir şeyi kaçırmayan sensörlerle donatıldı",
+      "case": "Kasa",
+      "glass": "Cam",
+      "display": "Ekran",
+      "resolution": "Çözünürlük",
+      "processor": "İşlemci",
+      "battery": "Batarya",
+      "waterResistance": "Su Direnci",
+      "sensors": "Sensörler",
+      "connectivity": "Bağlantı"
+    },
+    "colors": {
+      "desertGoldDesc": "PVD Altın, sınırlı üretim",
+      "titanSilberDesc": "Klasik zarafet, maksimum hafiflik",
+      "spaceBlackDesc": "DLC kaplı titanyum, derin siyah"
+    },
+    "cta": {
+      "price": "899€'dan başlayan fiyatlarla",
+      "shipping": "ücretsiz kargo",
+      "returns": "30 gün iade",
+      "headline1": "Senin Zamanın.",
+      "headline2": "Senin Saatin.",
+      "configure": "şimdi yapılandır",
+      "dealer": "bayi bul"
+    }
+  },
+  "ar": {
+    "nav": {
+      "design": "التصميم",
+      "technologie": "التكنولوجيا",
+      "gesundheit": "الصحة",
+      "bestellen": "اطلب الآن"
+    },
+    "hero": {
+      "tagline": "صُنع للأداء.",
+      "buy": "اشترِ – 899€",
+      "more": "اعرف أكثر"
+    },
+    "features": {
+      "f1title": "شاشة تكيفية",
+      "f1desc": "تتكيف شاشة Always-On تلقائيًا مع السطوع وحجم الخط وكثافة المعلومات وفق الإضاءة والموقف",
+      "f2title": "ذكاء اصطناعي للصحة",
+      "f2desc": "مراقبة مستمرة لتخطيط القلب وSpO2 ومستوى التوتر، يفسرها ذكاء اصطناعي شخصي يفهم أنماطك",
+      "f3title": "72 ساعة عمر البطارية",
+      "f3desc": "تمديد ذكي لعمر البطارية يصل إلى 72 ساعة"
+    },
+    "specs": {
+      "label": "المواصفات التقنية",
+      "headline": "دقة لا تقبل المساومة.",
+      "subline": "مصنوع من مواد تدوم لعقود. مجهز بمستشعرات لا تفوتها شيء",
+      "case": "الهيكل",
+      "glass": "الزجاج",
+      "display": "الشاشة",
+      "resolution": "الدقة",
+      "processor": "المعالج",
+      "battery": "البطارية",
+      "waterResistance": "مقاومة الماء",
+      "sensors": "المستشعرات",
+      "connectivity": "الاتصال"
+    },
+    "colors": {
+      "desertGoldDesc": "ذهب PVD، إصدار محدود",
+      "titanSilberDesc": "أناقة كلاسيكية، خفة قصوى",
+      "spaceBlackDesc": "تيتانيوم بطلاء DLC، أسود عميق"
+    },
+    "cta": {
+      "price": "ابتداءً من 899€",
+      "shipping": "شحن مجاني",
+      "returns": "إرجاع خلال 30 يومًا",
+      "headline1": "وقتك.",
+      "headline2": "ساعتك.",
+      "configure": "خصّص الآن",
+      "dealer": "ابحث عن موزع"
+    }
+  },
+  "ru": {
+    "nav": {
+      "design": "Дизайн",
+      "technologie": "Технологии",
+      "gesundheit": "Здоровье",
+      "bestellen": "Заказать"
+    },
+    "hero": {
+      "tagline": "Создано для результата.",
+      "buy": "Купить – 899€",
+      "more": "узнать больше"
+    },
+    "features": {
+      "f1title": "Адаптивный дисплей",
+      "f1desc": "Дисплей Always-On автоматически адаптирует яркость, размер шрифта и плотность информации к освещению и ситуации",
+      "f2title": "ИИ для здоровья",
+      "f2desc": "Непрерывный мониторинг ЭКГ, SpO2 и стресса. Анализируется персональным ИИ, понимающим ваши паттерны",
+      "f3title": "72 ч. работы от батареи",
+      "f3desc": "Интеллектуальное управление энергией продлевает работу до 72 часов"
+    },
+    "specs": {
+      "label": "технические характеристики",
+      "headline": "Безупречная точность.",
+      "subline": "Создано из материалов, которые служат десятилетиями. Оснащено датчиками, которые ничего не упускают",
+      "case": "Корпус",
+      "glass": "Стекло",
+      "display": "Дисплей",
+      "resolution": "Разрешение",
+      "processor": "Процессор",
+      "battery": "Аккумулятор",
+      "waterResistance": "Водозащита",
+      "sensors": "Датчики",
+      "connectivity": "Связь"
+    },
+    "colors": {
+      "desertGoldDesc": "PVD золото, ограниченный выпуск",
+      "titanSilberDesc": "Классическая элегантность, максимальная лёгкость",
+      "spaceBlackDesc": "Титан с DLC-покрытием, глубокий чёрный"
+    },
+    "cta": {
+      "price": "От 899€",
+      "shipping": "бесплатная доставка",
+      "returns": "возврат 30 дней",
+      "headline1": "Твоё время.",
+      "headline2": "Твои часы.",
+      "configure": "настроить сейчас",
+      "dealer": "найти дилера"
+    }
+  },
+  "zh": {
+    "nav": {
+      "design": "设计",
+      "technologie": "科技",
+      "gesundheit": "健康",
+      "bestellen": "立即购买"
+    },
+    "hero": {
+      "tagline": "为性能而生。",
+      "buy": "购买 – 899€",
+      "more": "了解更多"
+    },
+    "features": {
+      "f1title": "自适应显示屏",
+      "f1desc": "Always-On显示屏根据光线和情境自动调整亮度、字体大小和信息密度",
+      "f2title": "健康AI",
+      "f2desc": "持续监测心电图、血氧和压力。由了解您规律的个人AI进行解读",
+      "f3title": "72小时续航",
+      "f3desc": "智能能源管理将续航时间延长至72小时"
+    },
+    "specs": {
+      "label": "技术规格",
+      "headline": "毫不妥协的精准。",
+      "subline": "采用经久耐用的材料制造，配备无所遗漏的传感器",
+      "case": "表壳",
+      "glass": "玻璃",
+      "display": "显示屏",
+      "resolution": "分辨率",
+      "processor": "处理器",
+      "battery": "电池",
+      "waterResistance": "防水",
+      "sensors": "传感器",
+      "connectivity": "连接"
+    },
+    "colors": {
+      "desertGoldDesc": "PVD镀金，限量版",
+      "titanSilberDesc": "经典优雅，极致轻盈",
+      "spaceBlackDesc": "DLC涂层钛金属，深邃黑"
+    },
+    "cta": {
+      "price": "起售价899€",
+      "shipping": "免费配送",
+      "returns": "30天退换",
+      "headline1": "你的时间。",
+      "headline2": "你的表。",
+      "configure": "立即配置",
+      "dealer": "查找经销商"
+    }
+  },
+  "ja": {
+    "nav": {
+      "design": "デザイン",
+      "technologie": "テクノロジー",
+      "gesundheit": "ヘルス",
+      "bestellen": "注文する"
+    },
+    "hero": {
+      "tagline": "パフォーマンスのために。",
+      "buy": "購入 – 899€",
+      "more": "詳しく見る"
+    },
+    "features": {
+      "f1title": "アダプティブディスプレイ",
+      "f1desc": "Always-Onディスプレイが光量と状況に合わせて明るさ、フォントサイズ、情報密度を自動調整",
+      "f2title": "ヘルスAI",
+      "f2desc": "ECG・SpO2・ストレスを継続的に計測。あなたのパターンを理解するパーソナルAIが解析します",
+      "f3title": "72時間バッテリー",
+      "f3desc": "インテリジェントなエネルギー管理により、最大72時間のバッテリー持続を実現"
+    },
+    "specs": {
+      "label": "技術仕様",
+      "headline": "妥協なき精度。",
+      "subline": "何十年も持続する素材で製造。何も見逃さないセンサーを搭載",
+      "case": "ケース",
+      "glass": "ガラス",
+      "display": "ディスプレイ",
+      "resolution": "解像度",
+      "processor": "プロセッサ",
+      "battery": "バッテリー",
+      "waterResistance": "防水",
+      "sensors": "センサー",
+      "connectivity": "接続性"
+    },
+    "colors": {
+      "desertGoldDesc": "PVDゴールド、限定版",
+      "titanSilberDesc": "クラシックな優雅さ、最大限の軽さ",
+      "spaceBlackDesc": "DLCコーティングチタン、ディープブラック"
+    },
+    "cta": {
+      "price": "899€から",
+      "shipping": "送料無料",
+      "returns": "30日間返品可能",
+      "headline1": "あなたの時間。",
+      "headline2": "あなたの時計。",
+      "configure": "今すぐ設定",
+      "dealer": "販売店を探す"
+    }
+  }
+}

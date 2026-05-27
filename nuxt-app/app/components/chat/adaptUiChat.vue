@@ -27,7 +27,7 @@ const handleSend = async () => {
 
 <template>
     <div ref="chatContainer"  class="fixed bottom-4 right-4 z-50 w-[30rem] bg-white rounded-2xl group flex flex-col p-[1rem] border-neutral-500 border-[2px] duration-150 hover:border-primary">
-        <div v-if="!show" @click="show = !show">
+        <div v-if="!show" @click="show = !show" class="cursor-pointer">
             <div class="p-[0.5rem] ">
                 <div class="flex flex-row-reverse justify-between">
                     <div>
@@ -39,7 +39,7 @@ const handleSend = async () => {
         </div>
         <div v-if="show">
             <!-- Header -->
-            <div @click="show = false" :class="['absolute p-[0.5rem] cursor-pointer duration-150 justify-center items-center bg-primary rounded-full group-hover:opacity-100 opacity-0 text-[0.75rem] -top-4 right-4 text-white']">schließen</div>
+            <div @click="show = false" :class="['absolute pr-[0.5rem] pl-[0.5rem] p-[0.25rem] cursor-pointer duration-150 justify-center items-center bg-primary rounded-full group-hover:opacity-100 opacity-0 text-[0.75rem] -top-4 right-4 text-white']">schließen</div>
             <div class=" p-[1rem] flex items-center gap-[0.5rem]">
                 <div class="w-[2rem] h-[2rem] rounded-full  flex items-center justify-center bg-primary">
                     <Icon name="material-symbols:chat-rounded" class="text-white w-[1.2rem] h-[1.2rem]"/>

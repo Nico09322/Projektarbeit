@@ -2,6 +2,12 @@ import { ref, computed } from 'vue'
 import { useUserProfileStore } from '~/stores/userProfile'
 import { useUIAdaptationsStore } from '~/stores/uiAdaptations'
 
+const LANGUAGE_LABELS = {
+    de: 'Deutsch', en: 'Englisch', fr: 'Français', es: 'Español',
+    it: 'Italiano', tr: 'Türkçe', ar: 'العربية', ru: 'Русский',
+    zh: '中文', ja: '日本語',
+}
+
 export function useGroq() {
     const profileStore = useUserProfileStore()
     const uiStore = useUIAdaptationsStore()
@@ -39,6 +45,11 @@ export function useGroq() {
                 lastMutations.value = uiStore.applyMutations(data.uiMutations)
             } else {
                 lastMutations.value = []
+            }
+
+            // Sprachmutation anwenden falls vorhanden
+            if (data.language && LANGUAGE_LABELS[data.language]) {
+                profileStore.language = { label: LANGUAGE_LABELS[data.language], value: data.language }
             }
         } catch (err) {
             error.value = err?.data?.message ?? 'Ein Fehler ist aufgetreten.'
