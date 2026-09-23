@@ -12,16 +12,12 @@ const DEFAULT_TOKENS = {
 export const useUIAdaptationsStore = defineStore('uiAdaptations', {
     state: () => ({
         tokens: { ...DEFAULT_TOKENS },
-        // Log der Änderungen – nützlich um im Chat zu erklären was geändert wurde
+        // Log der Änderungen 
         changeLog: [],
     }),
 
     getters: {
-        /**
-         * Gibt aufgelöste Tailwind-Klassen zurück, die Komponenten direkt binden können.
-         * Struktur: { body, lead, headline, subline, spec, btn, lineHeight,
-         *             section, card, gap, bodyColor, mutedColor, headingColor, motionClass }
-         */
+        //Gibt aufgelöste Tailwind-Klassen zurück, die Komponenten direkt binden können.
         classes(state) {
             const t = state.tokens
             const map = adaptiveClasses.tokens

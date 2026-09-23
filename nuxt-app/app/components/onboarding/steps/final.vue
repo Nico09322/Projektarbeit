@@ -19,8 +19,8 @@
 </script>
 
 <template>
-    <div class="flex flex-col justify-center items-center p-[1rem]">
-        <div ref="checkmarkBorder" class="rounded-full bg-primary w-[8rem] h-[8rem] flex justify-center items-center">
+    <div class="flex flex-col justify-center items-center p-[1rem] text-center">
+        <div ref="checkmarkBorder" class="rounded-full bg-primary w-[6rem] h-[6rem] sm:w-[8rem] sm:h-[8rem] flex justify-center items-center">
             <div ref="checkmark">
                 <Icon name="material-symbols:check-rounded" class="bg-white h-[3rem] w-[3rem] mt-[0.3rem]"/>
             </div>

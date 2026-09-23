@@ -4,32 +4,32 @@
             "base": {
                 "body": "text-base",
                 "lead": "text-sm",
-                "headline": "text-4xl",
-                "subline": "text-lg",
+                "headline": "text-3xl md:text-4xl",
+                "subline": "text-base md:text-lg",
                 "spec": "text-sm",
                 "btn": "text-sm",
-                "hero": "text-9xl",
-                "sectionHead": "text-7xl"
+                "hero": "text-8xl md:text-9xl",
+                "sectionHead": "text-4xl md:text-7xl"
             },
             "large": {
                 "body": "text-lg",
                 "lead": "text-base",
-                "headline": "text-5xl",
-                "subline": "text-xl",
+                "headline": "text-4xl md:text-5xl",
+                "subline": "text-lg md:text-xl",
                 "spec": "text-base",
                 "btn": "text-base",
-                "hero": "text-9xl",
-                "sectionHead": "text-7xl"
+                "hero": "text-8xl md:text-9xl",
+                "sectionHead": "text-4xl md:text-7xl"
             },
             "xl": {
                 "body": "text-xl",
                 "lead": "text-lg",
-                "headline": "text-6xl",
-                "subline": "text-2xl",
+                "headline": "text-4xl md:text-6xl",
+                "subline": "text-xl md:text-2xl",
                 "spec": "text-lg",
                 "btn": "text-lg",
-                "hero": "text-9xl",
-                "sectionHead": "text-7xl"
+                "hero": "text-8xl md:text-9xl",
+                "sectionHead": "text-4xl md:text-7xl"
             }
         },
         "lineHeight": {
@@ -97,25 +97,34 @@
         }
     },
     "safelist": [
-        "text-sm",
         "text-base",
-        "text-lg",
-        "text-xl",
-        "text-2xl",
+        "text-sm",
+        "text-3xl",
+        "md:text-4xl",
+        "md:text-lg",
+        "text-8xl",
+        "md:text-9xl",
         "text-4xl",
-        "text-5xl",
-        "text-6xl",
-        "text-9xl",
-        "text-7xl",
+        "md:text-7xl",
+        "text-lg",
+        "md:text-5xl",
+        "md:text-xl",
+        "text-xl",
+        "md:text-6xl",
+        "md:text-2xl",
         "leading-normal",
         "leading-relaxed",
         "leading-loose",
         "p-8",
-        "p-14",
         "p-4",
-        "p-8",
         "gap-4",
+        "p-14",
         "gap-8",
+        "text-[#B3B3B3]",
+        "text-[#656565]",
+        "text-white",
+        "text-[#E5E5E5]",
+        "text-[#A0A0A0]",
         "adapt-reduced-motion"
     ]
 }

@@ -44,15 +44,15 @@ onMounted(() => {
     </div>
     <div class="gap-[0.5rem] flex flex-col mt-[1.5rem]">
         <h3 class="text-primarytext">DARSTELLUNG</h3>
-        <div class="w-full flex flex-col justify-between gap-[1rem] text-[1.15rem] font-light">
+        <div class="w-full flex flex-col justify-between gap-[1rem] text-[1rem] sm:text-[1.15rem] font-light">
             <div
                 @click="emit('update:darkMode', !props.darkMode)"
-                class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border items-center gap-[2rem] bg-neutral-200 duration-100"
+                class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border items-center gap-[1rem] sm:gap-[2rem] bg-neutral-200 duration-100"
                 :class="props.darkMode ? 'border-primary' : 'border-secondarytext hover:border-primary'"
             >
                 <div class="text-secondarytext">Dunklen Modus bevorzugen</div>
                 <div
-                    class="rounded-full w-[3.5rem] h-[1.5rem] relative p-[0.25rem] duration-200 flex items-center"
+                    class="rounded-full w-[3.5rem] h-[1.5rem] shrink-0 relative p-[0.25rem] duration-200 flex items-center"
                     :class="props.darkMode ? 'bg-primary' : 'bg-primarytext/50'"
                 >
                     <div
@@ -63,12 +63,12 @@ onMounted(() => {
             </div>
             <div
                 @click="emit('update:reducedMotion', !props.reducedMotion)"
-                class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border items-center gap-[2rem] bg-neutral-200 duration-100"
+                class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border items-center gap-[1rem] sm:gap-[2rem] bg-neutral-200 duration-100"
                 :class="props.reducedMotion ? 'border-primary' : 'border-secondarytext hover:border-primary'"
             >
                 <div class="text-secondarytext">Weniger Animationen</div>
                 <div
-                    class="rounded-full w-[3.5rem] h-[1.5rem] relative p-[0.25rem] duration-200 flex items-center"
+                    class="rounded-full w-[3.5rem] h-[1.5rem] shrink-0 relative p-[0.25rem] duration-200 flex items-center"
                     :class="props.reducedMotion ? 'bg-primary' : 'bg-primarytext/50'"
                 >
                     <div
@@ -81,7 +81,7 @@ onMounted(() => {
     </div>
     <div class="mt-[2rem] gap-[0.5rem] flex flex-col">
         <h3 class="text-primarytext">BEVORZUGTE SPRACHE</h3>
-        <div class="relative w-full text-[1.15rem] font-light" ref="dropdownRef">
+        <div class="relative w-full text-[1rem] sm:text-[1.15rem] font-light" ref="dropdownRef">
             <div
                 @click="open = !open"
                 class="flex cursor-pointer flex-row justify-between pr-[1rem] pl-[1rem] p-[0.5rem] w-full rounded-lg border bg-neutral-200 items-center duration-100"

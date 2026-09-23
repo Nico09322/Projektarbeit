@@ -46,6 +46,14 @@
       "headline2": "Deine Uhr.",
       "configure": "jetzt konfigurieren",
       "dealer": "Händler finden"
+    },
+    "explain": {
+      "label": "erklären"
+    },
+    "chat": {
+      "close": "schließen",
+      "placeholder": "Nachricht …",
+      "explainHint": "Fahre über ein Element und klicke auf „erklären“, um es dir erklären zu lassen."
     }
   },
   "en": {
@@ -95,6 +103,14 @@
       "headline2": "Your Watch.",
       "configure": "configure now",
       "dealer": "find a dealer"
+    },
+    "explain": {
+      "label": "explain"
+    },
+    "chat": {
+      "close": "close",
+      "placeholder": "Message …",
+      "explainHint": "Hover over an element and click “explain” to have it explained."
     }
   },
   "fr": {
@@ -144,6 +160,14 @@
       "headline2": "Votre Montre.",
       "configure": "configurer maintenant",
       "dealer": "trouver un revendeur"
+    },
+    "explain": {
+      "label": "expliquer"
+    },
+    "chat": {
+      "close": "fermer",
+      "placeholder": "Message …",
+      "explainHint": "Survolez un élément et cliquez sur « expliquer » pour obtenir une explication."
     }
   },
   "es": {
@@ -193,6 +217,14 @@
       "headline2": "Tu Reloj.",
       "configure": "configurar ahora",
       "dealer": "encontrar distribuidor"
+    },
+    "explain": {
+      "label": "explicar"
+    },
+    "chat": {
+      "close": "cerrar",
+      "placeholder": "Mensaje …",
+      "explainHint": "Pasa el cursor sobre un elemento y haz clic en «explicar» para que te lo expliquen."
     }
   },
   "it": {
@@ -242,6 +274,14 @@
       "headline2": "Il tuo Orologio.",
       "configure": "configura ora",
       "dealer": "trova un rivenditore"
+    },
+    "explain": {
+      "label": "spiega"
+    },
+    "chat": {
+      "close": "chiudi",
+      "placeholder": "Messaggio …",
+      "explainHint": "Passa il mouse su un elemento e clicca su «spiega» per ricevere una spiegazione."
     }
   },
   "tr": {
@@ -291,6 +331,14 @@
       "headline2": "Senin Saatin.",
       "configure": "şimdi yapılandır",
       "dealer": "bayi bul"
+    },
+    "explain": {
+      "label": "açıkla"
+    },
+    "chat": {
+      "close": "kapat",
+      "placeholder": "Mesaj …",
+      "explainHint": "Bir öğenin üzerine gelip “açıkla”ya tıklayarak açıklama alabilirsin."
     }
   },
   "ar": {
@@ -340,6 +388,14 @@
       "headline2": "ساعتك.",
       "configure": "خصّص الآن",
       "dealer": "ابحث عن موزع"
+    },
+    "explain": {
+      "label": "اشرح"
+    },
+    "chat": {
+      "close": "إغلاق",
+      "placeholder": "رسالة …",
+      "explainHint": "مرّر فوق عنصر وانقر على «اشرح» للحصول على شرح له."
     }
   },
   "ru": {
@@ -389,6 +445,14 @@
       "headline2": "Твои часы.",
       "configure": "настроить сейчас",
       "dealer": "найти дилера"
+    },
+    "explain": {
+      "label": "объяснить"
+    },
+    "chat": {
+      "close": "закрыть",
+      "placeholder": "Сообщение …",
+      "explainHint": "Наведите на элемент и нажмите «объяснить», чтобы получить пояснение."
     }
   },
   "zh": {
@@ -438,6 +502,14 @@
       "headline2": "你的表。",
       "configure": "立即配置",
       "dealer": "查找经销商"
+    },
+    "explain": {
+      "label": "解释"
+    },
+    "chat": {
+      "close": "关闭",
+      "placeholder": "消息 …",
+      "explainHint": "将鼠标悬停在元素上并点击“解释”即可获得说明。"
     }
   },
   "ja": {
@@ -487,6 +559,14 @@
       "headline2": "あなたの時計。",
       "configure": "今すぐ設定",
       "dealer": "販売店を探す"
+    },
+    "explain": {
+      "label": "説明"
+    },
+    "chat": {
+      "close": "閉じる",
+      "placeholder": "メッセージ …",
+      "explainHint": "要素にカーソルを合わせて「説明」をクリックすると説明が表示されます。"
     }
   }
 }
