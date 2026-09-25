@@ -19,8 +19,8 @@ Format deiner Antwort (immer exakt so, kein Markdown, kein Prefix):
 }
 
 Regeln für uiMutations:
-- Gib NUR die Felder an, die sich tatsächlich ändern sollen.
-- Wenn keine Änderung sinnvoll ist, gib ein leeres Objekt zurück: "uiMutations": {}
+- Setze nur die Felder, die sich tatsächlich ändern sollen. Alle anderen Felder auf null.
+- Wenn keine Änderung sinnvoll ist, setze alle Felder auf null.
 - Ändere fontSize auf "xl" bei explizitem Wunsch nach größerer Schrift oder bei Altersgruppe "Über 60".
 - Ändere motion auf "reduced" wenn der Nutzer Animationen störend findet.
 - Ändere contrast auf "high" bei Leseproblemen oder Barrierefreiheits-Wunsch.
@@ -29,9 +29,33 @@ Regeln für uiMutations:
 Regeln für language:
 - Setze "language" NUR wenn der Nutzer explizit die Sprache wechseln möchte (z.B. "switch to English", "auf Spanisch bitte", "change language to French").
 - Der Wert ist der ISO-639-1-Code der gewünschten Sprache.
-- Lass das Feld weg wenn keine Sprachänderung gewünscht ist.
+- Setze das Feld auf null wenn keine Sprachänderung gewünscht ist.
 - Antworte in deiner "message" bereits in der neuen Sprache und bestätige die Umstellung.
 `
+
+const nullableEnum = (...values) => ({ type: ['string', 'null'], enum: [...values, null] })
+
+const RESPONSE_SCHEMA = {
+    type: 'object',
+    properties: {
+        message: { type: 'string' },
+        uiMutations: {
+            type: 'object',
+            properties: {
+                fontSize: nullableEnum('base', 'large', 'xl'),
+                lineHeight: nullableEnum('normal', 'relaxed', 'loose'),
+                spacing: nullableEnum('normal', 'spacious'),
+                contrast: nullableEnum('normal', 'high'),
+                motion: nullableEnum('full', 'reduced'),
+            },
+            required: ['fontSize', 'lineHeight', 'spacing', 'contrast', 'motion'],
+            additionalProperties: false,
+        },
+        language: nullableEnum('de', 'en', 'fr', 'es', 'it', 'tr', 'ar', 'ru', 'zh', 'ja'),
+    },
+    required: ['message', 'uiMutations', 'language'],
+    additionalProperties: false,
+}
 
 function buildSystemPrompt(profile) {
     const p = aiPersonality
@@ -77,14 +101,17 @@ export default defineEventHandler(async (event) => {
     const groq = new Groq({ apiKey: process.env.GROQ_API_KEY })
 
     const completion = await groq.chat.completions.create({
-        model: 'llama-3.3-70b-versatile',
+        model: 'qwen/qwen3.8-27b',
         messages: [
             { role: 'system', content: buildSystemPrompt(profile) },
             ...messages.slice(-20).map(({ role, content }) => ({ role, content })),
         ],
         max_tokens: 600,
         temperature: 0.7,
-        response_format: { type: 'json_object' },
+        response_format: {
+            type: 'json_schema',
+            json_schema: { name: 'chat_response', strict: true, schema: RESPONSE_SCHEMA },
+        },
     })
 
     const raw = completion.choices[0]?.message?.content ?? '{}'
@@ -92,12 +119,18 @@ export default defineEventHandler(async (event) => {
     try {
         parsed = JSON.parse(raw)
     } catch {
+        // z.B. bei Abbruch durch max_tokens
         parsed = { message: raw, uiMutations: {} }
     }
 
+    // null = keine Änderung → Feld weglassen, damit das Frontend nur echte Mutationen sieht
+    const uiMutations = Object.fromEntries(
+        Object.entries(parsed.uiMutations ?? {}).filter(([, v]) => v != null)
+    )
+
     return {
         message: parsed.message ?? '',
-        uiMutations: parsed.uiMutations ?? {},
+        uiMutations,
         language: parsed.language ?? null,
         usage: completion.usage,
     }
