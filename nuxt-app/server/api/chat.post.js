@@ -119,11 +119,10 @@ export default defineEventHandler(async (event) => {
     try {
         parsed = JSON.parse(raw)
     } catch {
-        // z.B. bei Abbruch durch max_tokens
+
         parsed = { message: raw, uiMutations: {} }
     }
 
-    // null = keine Änderung → Feld weglassen, damit das Frontend nur echte Mutationen sieht
     const uiMutations = Object.fromEntries(
         Object.entries(parsed.uiMutations ?? {}).filter(([, v]) => v != null)
     )
